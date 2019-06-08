@@ -11,4 +11,6 @@ RUN apk --no-cache add gcc make git libgcc libc-dev linux-headers libpcap-dev &&
     rm -rf /tmp/masscan && \
     apk del gcc make git libgcc libc-dev linux-headers
 
-ENTRYPOINT ["/bin/masscan"]
+ADD run.sh /
+
+ENTRYPOINT ["/run.sh"]
