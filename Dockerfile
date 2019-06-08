@@ -9,6 +9,6 @@ RUN apk --no-cache add gcc make git libgcc libc-dev linux-headers libpcap-dev &&
     strip bin/masscan && \
     mv bin/masscan /bin && \
     rm -rf /tmp/masscan && \
-    apk del gcc make git libgcc libc-dev linux-headers libpcap-dev
+    apk del gcc make git libgcc libc-dev linux-headers
 
 ENTRYPOINT ["/bin/masscan"]
